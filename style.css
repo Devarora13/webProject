@@ -226,6 +226,7 @@ main {
   color : rgba(0,0,0,0.5);
   font-weight: 600;
   font-size: 14px;
+  line-height: 25px;
 }
 
 .objective {
