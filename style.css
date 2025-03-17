@@ -450,7 +450,7 @@ footer {
   color: white;
 }
 .footerUpper, .footerMiddle {
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 @media screen and (max-width:768px){
   .footerUpper , .footerMiddle{ /*part of middle footer*/
@@ -460,8 +460,10 @@ footer {
 /* footer upper ends*/
 /* footer middle starts */
 /* footer left section starts */
-.footerLogo, .socials {
-  max-width: 302px;
+.footerMiddle p {
+  color: white;
+  margin-top: 1rem;
+  text-align: justify;
 }
 .socials i {
   font-size: 2rem;
@@ -486,14 +488,14 @@ footer {
   margin-bottom: 2rem;
   font-weight: 600;
 }
+.footerMiddleRightBoxes {
+  padding-left: 4.3rem;
+}
 /* footer right section ends */
 /* footer middle ends */
 /* footer lower starts */
-.footerLower span, .footerLower a, .footerLower i {
+.footerLower {
   color: white;
-}
-.footerLower a {
-  font-weight: 600;
 }
 /* footer ends */
 /* Home page ends ----------------------------> */
