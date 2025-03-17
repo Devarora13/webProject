@@ -499,7 +499,7 @@ footer {
 /* About us page starts ---------------->*/
 /*hero section starts */
 .heroContainer {
-  background-image: url("images/hero-section2.jpg");
+  background-image: url("images/heroPic3.jpeg");
   background-size:cover;
   min-height: 25rem;
   display: flex;
