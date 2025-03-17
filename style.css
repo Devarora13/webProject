@@ -202,7 +202,7 @@ main {
   }
 }
 /* slider ends */
-/* objective start */
+/* join our panel starts */
 .secText1,.secText2 {
   text-align: center;
   text-wrap: wrap;
@@ -224,15 +224,17 @@ main {
   font-size: 14px;
   line-height: 25px;
 }
-
-.objective {
-  margin-top: 50px;
-  height : 850px;
-  background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+/* join our panel ends */
+/* objective starts */
+/*Style also used in Services(What we offer)*/
+.alternateCardBox {   
   background-size: cover;
   background-attachment: fixed;
 }
-.obj1, .obj2, .obj3 {
+.objectiveImage {   /*alternateCardBox background*/
+  background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+.obj {
   width: 60%;
   height: 33.334%;
   background-color: var(--customLight);
@@ -241,37 +243,37 @@ main {
   border-radius: 15px;
 
 }
-.obj2 {
+.objRight {
   margin-left: 40%;
 }
-.obj1 h4, .obj2 h4, .obj3 h4 {
+.obj h4 {
   text-align: center;
   color: var(--customBlue);
   font-weight: 700;
   text-decoration: underline;
 }
-.obj1 p, .obj2 p, .obj3 p {
+.obj p {
   text-align: center;
   font-size: 1rem;
   margin-top: 50px;
 }
 @media screen and (max-width:700px){
-  .obj1, .obj2, .obj3 {
+  .obj {
     padding: 1.875rem;
   }
-  .obj1 p, .obj2 p, .obj3 p {
+  .obj p{
     margin-top: 30px;
     font-size: 0.93rem;
   }
 }
 @media screen and (max-width:410px){
-  .obj1, .obj2, .obj3 {
+  .obj {
     padding: 1rem;
   }
 }
 /* objective ends */
 /* about us starts */
-.commonSection {    /*section used in about us, services page*/
+.commonSection { 
   display: flex;
   padding: 5rem 7rem;
   background-color: var(--customLightBlue);
@@ -496,7 +498,7 @@ footer {
 }
 /* footer ends */
 /* Home page ends ----------------------------> */
-/* About us page starts ---------------->*/
+/* About IQ page starts ---------------->*/
 /*hero section starts */
 .heroContainer {
   background-image: url("images/heroPic3.jpeg");
@@ -535,76 +537,62 @@ footer {
   }
 }
 /* hero section ends */
-/* about us copied from Homepage- class commonSection*/
-/* secTexts */
+/* About IQ copied from Homepage- class commonSection*/
 /* footer */
-/* About us page ends ---------------->*/
+/* About IQ page ends ---------------->*/
 /* Services starts ---------------->*/
-/* Qualitative page starts ---------------->*/
+/* CATI & Telephone page starts ---------------->*/
 /* hero section copied from About Us page */
-/* class commonSection */
-/* service cards starts */
-.serviceCardBox {
+/* service content starts */
+.serviceContentBox {
   background-color: var(--customLightBlue);
-  padding: 0 20vw 5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-  column-gap: 50px;
-  row-gap: 70px;
-}
-.serviceCard {
-  background-color: white;
-  padding: 50px 30px;
-  border-radius: 10px;
-  box-shadow: 0.5px 0.5px 8px rgba(0,0,0,0.3);
+  padding: 4rem 20vw;
   text-align: center;
-  &:hover .cardLogoBox {
-    transform: rotate(360deg);
-    border-radius: 50%;
-  }
 }
-.cardLogoBox {
-  transition: transform 0.5s ease, border-radius 0.5s ease;
-  width: 60px;
-  height: 60px;
-  background : linear-gradient(
-    90deg,
-    rgba(235, 56, 185, 1) 0%,
-    rgba(32, 56, 212, 1) 58%,
-    rgba(47, 179, 211, 1) 100%
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  margin: 0 auto 20px;
+.serviceContentBox h3 {
+  color: var(--customBlue);
+  font-weight: 900;
+  font-size: 2.2rem;
 }
-.cardLogoBox i {
-  color: white;
-  font-size: 25px;
-}
-.serviceCard h3 {
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.serviceCard p {
-  font-size: 14px;
-  line-height: 1.6;
+.serviceContentBox .paras {
   text-align: justify;
 }
-@media  screen and (max-width:550px) {
-  .serviceCardBox {
-    padding: 0 10vw 5rem;
-    row-gap: 50px;
+@media screen and (max-width:992px) {
+  .serviceContentBox {
+    padding : 4rem 10vw;
   }
 }
-/* service cards ends */
-/* footer */
-/* Qualitative page ends ---------------->*/
-/* Quantitave page copied from Qualitative page */
-/* Telephone page copied from Qualitative page */
-/* Business page copied from Qualitative page */
-/* Other services page copied from Qualitative page */
+/* service content ends */
+/* service cards style from home-objective  */
+.serviceImage1 {
+  background-image: url('https://img.freepik.com/free-photo/colleagues-working-together-call-center-office_23-2149256064.jpg?t=st=1742230867~exp=1742234467~hmac=9e7e947a589ea29bc06b75bc3cc6085f79808e0f862d23331b45124ab7454dcf&w=1380');
+}
+/* CATI & Telephone page ends ---------------->*/
+/* Healthcare page -------------------> */
+.serviceImage2 {
+  background-image: url('https://img.freepik.com/free-photo/medical-banner-with-doctor-wearing-goggles_23-2149611193.jpg?t=st=1742231281~exp=1742234881~hmac=36a5e4c8d559320325ca6633a9bd2fa3b52341e2d09e99f01793105f6f84f2c9&w=1380');
+}
+/* Quantative page -------------------> */
+.serviceImage3 {
+  background-image: url('https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408682.jpg?t=st=1741781454~exp=1741785054~hmac=e50018da90ba1d258e7c196387063841b80ef21037a0586099d53dee0b31cd2e&w=1380');
+}
+/* Qualitative page -------------------> */
+.serviceImage4 {
+  background-image: url('https://img.freepik.com/free-photo/close-up-young-colleagues-having-meeting_23-2149060259.jpg?t=st=1741688743~exp=1741692343~hmac=e9ee85b6a41c0c20fc0b5dea018e6fc83bf3fe38210b17bdc7a8f9591bb2acad&w=1380');
+}
+/* Business page -------------------> */
+.serviceImage5 {
+  background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+/* Programming page -------------------> */
+.serviceImage6 {
+  background-image: url('https://images.unsplash.com/photo-1617471346061-5d329ab9c574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+/* Data-Analysis page -------------------> */
+.serviceImage7 {
+  background-image: url('https://images.unsplash.com/photo-1542744173-05336fcc7ad4?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
 /* Services ends ---------------->*/
 /* Industries page starts --------------> */
 /* hero section copied from About Us page */
