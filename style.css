@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 :root {
   --customBlue: #133e87;
-  --customLight : white;
-  --customLightBlue : #f4f7fa;
-  --textColor : #555555;
+  --customLight: white;
+  --customLightBlue: #f4f7fa;
+  --textColor: #555555;
 }
 * {
   padding: 0;
@@ -11,7 +11,7 @@
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
   font-size: 0.93rem;
-  color:black;
+  color: black;
 }
 
 a {
@@ -33,11 +33,13 @@ p {
 /* Home page starts ----------------------------> */
 /* Navbar starts */
 .navbar {
-  background-color: var(--customLight) !important; /* Overrides default grey color */
-  box-shadow: 0 0.5px 10px rgba(0,0,0,0.3);
+  background-color: var(
+    --customLight
+  ) !important; /* Overrides default grey color */
+  box-shadow: 0 0.5px 10px rgba(0, 0, 0, 0.3);
 }
 .navbar .nav-link.active {
-  color: var(--customBlue); 
+  color: var(--customBlue);
 }
 
 .navbar-toggler-icon {
@@ -47,14 +49,14 @@ p {
   font-weight: 600;
   white-space: nowrap;
   cursor: pointer;
-  &:hover {                 
+  &:hover {
     color: var(--customBlue);
   }
 }
-.dropdown-item{
+.dropdown-item {
   text-align: center;
   padding: 1rem;
-  &:hover{
+  &:hover {
     color: var(--customBlue);
     transform: translateX(5px);
     transition: 0.3s ease-out;
@@ -64,7 +66,7 @@ p {
   }
 }
 /* Custom CSS for hover dropdown , works only on expanded Nav*/
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
   .navbar-nav .dropdown:hover .dropdown-menu {
     display: block; /* Show the dropdown menu */
     margin-top: 0; /* Adjust the position */
@@ -89,12 +91,13 @@ p {
 /* Navbar ends */
 main {
   position: relative;
-  top : 94px;
+  top: 94px;
 }
 .slide {
   margin-bottom: 5rem;
 }
-.carousel-control-prev-icon,.carousel-control-next-icon{
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
   transform: scale(2);
 }
 .carousel-caption {
@@ -107,7 +110,8 @@ main {
 }
 
 .btnEffect {
-  background: linear-gradient(var(--customLight), var(--customLight)) padding-box,
+  background: linear-gradient(var(--customLight), var(--customLight))
+      padding-box,
     linear-gradient(
         90deg,
         rgba(235, 56, 185, 1) 0%,
@@ -144,10 +148,12 @@ main {
 
 .btnEffect:hover span {
   transform: translateX(7px);
-  color:white;
+  color: white;
 }
 
-.homeHerotextOne,.homeHerotextTwo,.homeHerotextThree {
+.homeHerotextOne,
+.homeHerotextTwo,
+.homeHerotextThree {
   color: white;
 }
 .homeHerotextTwo {
@@ -166,31 +172,37 @@ main {
   font-size: 1.5rem;
 }
 
-.homeHerotextOne, .homeHerotextTwo, .homeHerotextThree {
+.homeHerotextOne,
+.homeHerotextTwo,
+.homeHerotextThree {
   animation: appear 1s ease-in;
 }
 
 @keyframes appear {
   0% {
-      opacity: 0;
-      transform: translateY(8px);
+    opacity: 0;
+    transform: translateY(8px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media screen and (max-width:940px){
-  .homeHerotextOne, .homeHerotextTwo, .homeHerotextThree{
+@media screen and (max-width: 940px) {
+  .homeHerotextOne,
+  .homeHerotextTwo,
+  .homeHerotextThree {
     width: 70%;
   }
   .carousel-caption {
     padding: 50px 0;
   }
 }
-@media screen and (max-width:740px){
-  .homeHerotextOne, .homeHerotextTwo, .homeHerotextThree {
+@media screen and (max-width: 740px) {
+  .homeHerotextOne,
+  .homeHerotextTwo,
+  .homeHerotextThree {
     width: 100%;
   }
   .homeHerotextTwo {
@@ -203,7 +215,8 @@ main {
 }
 /* slider ends */
 /* join our panel starts */
-.secText1,.secText2 {
+.secText1,
+.secText2 {
   text-align: center;
   text-wrap: wrap;
   padding: 0 3rem;
@@ -213,13 +226,12 @@ main {
   font-weight: 900;
   font-size: 2rem;
   margin-bottom: 1rem;
-  color : var(--customBlue);
+  color: var(--customBlue);
   margin-top: 3rem;
 }
 
 .secText2 {
-  margin-top: 2rem;
-  color : rgba(0,0,0,0.5);
+  color: rgba(0, 0, 0, 0.5);
   font-weight: 600;
   font-size: 14px;
   line-height: 25px;
@@ -227,21 +239,21 @@ main {
 /* join our panel ends */
 /* objective starts */
 /*Style also used in Services(What we offer)*/
-.alternateCardBox {   
+.alternateCardBox {
   background-size: cover;
   background-attachment: fixed;
 }
-.objectiveImage {   /*alternateCardBox background*/
-  background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+.objectiveImage {
+  /*alternateCardBox background*/
+  background-image: url("https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 .obj {
   width: 60%;
   height: 33.334%;
   background-color: var(--customLight);
-  box-shadow: 0.5px 0.5px 8px rgba(0,0,0,0.3);
+  box-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.3);
   padding: 50px;
   border-radius: 15px;
-
 }
 .objRight {
   margin-left: 40%;
@@ -257,35 +269,35 @@ main {
   font-size: 1rem;
   margin-top: 50px;
 }
-@media screen and (max-width:700px){
+@media screen and (max-width: 700px) {
   .obj {
     padding: 1.875rem;
   }
-  .obj p{
+  .obj p {
     margin-top: 30px;
     font-size: 0.93rem;
   }
 }
-@media screen and (max-width:410px){
+@media screen and (max-width: 410px) {
   .obj {
     padding: 1rem;
   }
 }
 /* objective ends */
 /* about us starts */
-.commonSection { 
+.commonSection {
   display: flex;
   padding: 5rem 7rem;
   background-color: var(--customLightBlue);
-  margin-top: 5rem;
 }
-.commonSection .content, .commonSection .image {
-  width : 50%;
+.commonSection .content,
+.commonSection .image {
+  width: 50%;
   padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap : 2rem;
+  gap: 2rem;
 }
 .commonSection .paras {
   text-align: justify;
@@ -299,30 +311,33 @@ main {
   font-weight: 900;
   font-size: 2.2rem;
 }
-@media (max-width:1220px){
+@media (max-width: 1220px) {
   .commonSection {
     padding: 4rem 2rem;
   }
-  .commonSection .content, .commonSection .image {
+  .commonSection .content,
+  .commonSection .image {
     padding: 2rem;
-    gap : 1.5rem;
+    gap: 1.5rem;
   }
 }
-@media (max-width:1000px){
+@media (max-width: 1000px) {
   .commonSection {
     flex-direction: column;
     align-items: center;
   }
-  .commonSection .content, .commonSection .image {
-    width : 90%;
+  .commonSection .content,
+  .commonSection .image {
+    width: 90%;
   }
 }
-@media (max-width:550px){
+@media (max-width: 550px) {
   .commonSection {
     padding: 3rem 0;
   }
-  .commonSection .content, .commonSection .image {
-    padding : 2rem 0.7rem;
+  .commonSection .content,
+  .commonSection .image {
+    padding: 2rem 0.7rem;
   }
 }
 /* about us ends */
@@ -358,14 +373,14 @@ main {
   color: black;
 }
 .card-link {
-  color : var(--textColor);
+  color: var(--textColor);
   font-size: 1rem;
   font-weight: 700;
 }
 /* services end */
 /* achievements start */
 .achievements {
-  background : linear-gradient(
+  background: linear-gradient(
     90deg,
     rgba(235, 56, 185, 1) 0%,
     rgba(32, 56, 212, 1) 58%,
@@ -409,9 +424,9 @@ main {
 /* footer start */
 footer {
   position: relative;
-  top : 94px;
+  top: 94px;
   height: auto;
-  background : linear-gradient(
+  background: linear-gradient(
     90deg,
     rgba(235, 56, 185, 1) 0%,
     rgba(32, 56, 212, 1) 58%,
@@ -440,7 +455,7 @@ footer {
 .btnEffect2 span {
   margin-left: 3px;
   transition: transform 0.3s;
-  color:white;
+  color: white;
 }
 
 .btnEffect2:hover span {
@@ -451,11 +466,14 @@ footer {
   font-size: 2rem;
   color: white;
 }
-.footerUpper, .footerMiddle {
+.footerUpper,
+.footerMiddle {
   padding: 3rem 0;
 }
-@media screen and (max-width:768px){
-  .footerUpper , .footerMiddle{ /*part of middle footer*/
+@media screen and (max-width: 768px) {
+  .footerUpper,
+  .footerMiddle {
+    /*part of middle footer*/
     padding: 3rem 0;
   }
 }
@@ -472,15 +490,16 @@ footer {
   color: white;
 }
 .socials a:hover i {
-  color: rgba(255,255,255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 /* footer left section ends */
 /* footer right section starts */
-.footerMiddle h4, .footerMiddle a{
+.footerMiddle h4,
+.footerMiddle a {
   color: white;
 }
 .footerMiddle a:hover {
-  color: rgba(255,255,255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 .footerMiddle li {
   list-style-type: none;
@@ -502,7 +521,7 @@ footer {
 /*hero section starts */
 .heroContainer {
   background-image: url("images/heroPic3.jpeg");
-  background-size:cover;
+  background-size: cover;
   min-height: 25rem;
   display: flex;
   justify-content: center;
@@ -510,14 +529,15 @@ footer {
 .heroContent {
   padding: 5rem 0;
   max-height: 100%;
-  width : 50%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap : 2rem;
+  gap: 2rem;
 }
-.heroHeading, .heroPara {
-  color:white;
+.heroHeading,
+.heroPara {
+  color: white;
   text-align: justify;
   font-size: 1rem;
 }
@@ -525,7 +545,7 @@ footer {
   font-size: 2.8rem;
   font-weight: 700;
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .heroContent {
     width: 85%;
   }
@@ -546,7 +566,7 @@ footer {
 /* service content starts */
 .serviceContentBox {
   background-color: var(--customLightBlue);
-  padding: 4rem 20vw;
+  padding: 6rem 20vw 4rem;
   text-align: center;
 }
 .serviceContentBox h3 {
@@ -557,40 +577,40 @@ footer {
 .serviceContentBox .paras {
   text-align: justify;
 }
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
   .serviceContentBox {
-    padding : 4rem 10vw;
+    padding: 5rem 10vw 4rem;
   }
 }
 /* service content ends */
 /* service cards style from home-objective  */
 .serviceImage1 {
-  background-image: url('https://img.freepik.com/free-photo/colleagues-working-together-call-center-office_23-2149256064.jpg?t=st=1742230867~exp=1742234467~hmac=9e7e947a589ea29bc06b75bc3cc6085f79808e0f862d23331b45124ab7454dcf&w=1380');
+  background-image: url("https://img.freepik.com/free-photo/colleagues-working-together-call-center-office_23-2149256064.jpg?t=st=1742230867~exp=1742234467~hmac=9e7e947a589ea29bc06b75bc3cc6085f79808e0f862d23331b45124ab7454dcf&w=1380");
 }
 /* CATI & Telephone page ends ---------------->*/
 /* Healthcare page -------------------> */
 .serviceImage2 {
-  background-image: url('https://img.freepik.com/free-photo/medical-banner-with-doctor-wearing-goggles_23-2149611193.jpg?t=st=1742231281~exp=1742234881~hmac=36a5e4c8d559320325ca6633a9bd2fa3b52341e2d09e99f01793105f6f84f2c9&w=1380');
+  background-image: url("https://img.freepik.com/free-photo/medical-banner-with-doctor-wearing-goggles_23-2149611193.jpg?t=st=1742231281~exp=1742234881~hmac=36a5e4c8d559320325ca6633a9bd2fa3b52341e2d09e99f01793105f6f84f2c9&w=1380");
 }
 /* Quantative page -------------------> */
 .serviceImage3 {
-  background-image: url('https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408682.jpg?t=st=1741781454~exp=1741785054~hmac=e50018da90ba1d258e7c196387063841b80ef21037a0586099d53dee0b31cd2e&w=1380');
+  background-image: url("https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408682.jpg?t=st=1741781454~exp=1741785054~hmac=e50018da90ba1d258e7c196387063841b80ef21037a0586099d53dee0b31cd2e&w=1380");
 }
 /* Qualitative page -------------------> */
 .serviceImage4 {
-  background-image: url('https://img.freepik.com/free-photo/close-up-young-colleagues-having-meeting_23-2149060259.jpg?t=st=1741688743~exp=1741692343~hmac=e9ee85b6a41c0c20fc0b5dea018e6fc83bf3fe38210b17bdc7a8f9591bb2acad&w=1380');
+  background-image: url("https://img.freepik.com/free-photo/close-up-young-colleagues-having-meeting_23-2149060259.jpg?t=st=1741688743~exp=1741692343~hmac=e9ee85b6a41c0c20fc0b5dea018e6fc83bf3fe38210b17bdc7a8f9591bb2acad&w=1380");
 }
 /* Business page -------------------> */
 .serviceImage5 {
-  background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 /* Programming page -------------------> */
 .serviceImage6 {
-  background-image: url('https://images.unsplash.com/photo-1617471346061-5d329ab9c574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url("https://images.unsplash.com/photo-1617471346061-5d329ab9c574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 /* Data-Analysis page -------------------> */
 .serviceImage7 {
-  background-image: url('https://images.unsplash.com/photo-1542744173-05336fcc7ad4?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url("https://images.unsplash.com/photo-1542744173-05336fcc7ad4?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 /* Services ends ---------------->*/
@@ -598,56 +618,84 @@ footer {
 /* hero section copied from About Us page */
 /* secTexts */
 /* Industry cards starts*/
-.industryCardBox {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+.industries-section {
   background-color: var(--customLightBlue);
-  padding : 5rem 10vw;
-  margin-top: 2rem;
+  min-height: 100vh;
+}
+.slider-card {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.5s ease;
+  display: none;
+}
+.slider-card p {
+  font-size: 1rem;
 }
 
-.industryCard {
-  box-shadow: 0.5px 0.5px 8px rgba(0,0,0,0.3);
-  background-color: white;
-  border-radius: 10px;
-  padding: 25px;
-  text-align: left;
-  transition: box-shadow 0.1s ease;
-  &:hover {
-    box-shadow: 0.5px 0.5px 15px rgba(0,0,0,0.3);
-  }
-  &:hover .number {
-    color: white;
-    background-color: var(--customBlue);
-  }
+.slider-card.active {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+}
+.slider-card-title {
+  color: var(--customBlue);
 }
 
-.industryCard .number {
-  aspect-ratio: 1;
-  width: min(80px,30%);
-  font-size: 220%;
-  font-weight: bold;
-  color: #e0e0e0;
-  transition: color 0.1s ease, background-color 0.1s ease;
-  display: grid;
-  place-items: center;
+.slider-icon {
+  background: rgba(124, 77, 255, 0.1);
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  border: 2px solid currentColor;   /*takes current color of text*/
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 3px solid var(--customBlue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.industryCard h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 20px 0;
-  color: #333;
+.slider-icon i {
+  font-size: 36px;
+  color: gray;
 }
 
-.industryCard p {
-  font-size: 14px;
-  color: #9c9c9c;
-  line-height: 1.6;
+.control-btn {
+  border: 2px solid var(--customBlue);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.control-btn:hover {
+  transform: scale(1.1);
+}
+
+.control-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.control-btn.disabled:hover {
+  transform: scale(1);
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d1c4e9;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: var(--customBlue);
+  transform: scale(1.2);
 }
 /* Industry cards ends */
 /* footer */
@@ -661,14 +709,14 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 25px;
 }
-@media (max-width:1220px){
+@media (max-width: 1220px) {
   .careerCardBox {
     padding: 4rem 1.5rem;
   }
 }
 .careerCard {
   border-radius: 1rem;
-  box-shadow: 0.5px 0.5px 8px rgba(0,0,0,0.3);
+  box-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.3);
 }
 .careerCard span {
   color: var(--textColor);
@@ -679,7 +727,7 @@ footer {
 .careerLogoBox {
   width: 50px;
   height: 50px;
-  background : linear-gradient(
+  background: linear-gradient(
     90deg,
     rgba(235, 56, 185, 1) 0%,
     rgba(32, 56, 212, 1) 58%,
@@ -696,8 +744,3 @@ footer {
 }
 
 /* Career page ends -------------------------->*/
-
-
-
-
-
