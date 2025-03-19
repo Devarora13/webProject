@@ -13,7 +13,7 @@
   font-size: 0.93rem;
   color: black;
 }
-.text-justify {
+.text-justify {         /*custom text-justify, as no longer supported in Boostrap*/
   text-align: justify;
 }
 
