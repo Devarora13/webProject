@@ -516,15 +516,13 @@ footer {
   justify-content: center;
 }
 .heroContent {
-  padding: 5rem 0;
+  padding: 5rem 0 1rem;
   max-height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
 }
-.heroHeading,
 .heroPara {
   color: white;
   text-align: justify;
@@ -533,6 +531,7 @@ footer {
 .heroHeading {
   font-size: 2.8rem;
   font-weight: 700;
+  color: white;
 }
 @media screen and (max-width: 600px) {
   .heroContent {
