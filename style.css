@@ -13,6 +13,9 @@
   font-size: 0.93rem;
   color: black;
 }
+.text-justify {
+  text-align: justify;
+}
 
 a {
   text-decoration: none;
@@ -299,10 +302,6 @@ main {
   justify-content: center;
   gap: 2rem;
 }
-.commonSection .paras {
-  text-align: justify;
-}
-
 .commonSection img {
   border-radius: 10px;
 }
@@ -311,6 +310,7 @@ main {
   font-weight: 900;
   font-size: 2.2rem;
 }
+
 @media (max-width: 1220px) {
   .commonSection {
     padding: 4rem 2rem;
@@ -399,17 +399,6 @@ main {
   transition: all 0.3s ease;
 }
 /* achievements end */
-/* clients start */
-.clients {
-  margin: 3.5rem 10vw;
-}
-
-.clientBox {
-  display: flex;
-  gap: 2.5rem;
-  overflow-x: hidden; /* Allows scrolling */
-}
-/* clients end */
 /* documents start, mostly handled with bootstrap*/
 .companyDocuments {
   margin-top: 5rem;
@@ -558,6 +547,27 @@ footer {
 }
 /* hero section ends */
 /* About IQ copied from Homepage- class commonSection*/
+/* Behind story starts */
+.behindStory {
+  background-color: var(--customLightBlue);
+  padding: 0 10rem;
+}
+.behindStory h3 {
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--customBlue);
+}
+@media screen and (max-width: 1220px) {
+  .behindStory {
+    padding: 0 4rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .behindStory {
+    padding: 0rem 2rem;
+  }
+}
+/* Behind story ends */
 /* footer */
 /* About IQ page ends ---------------->*/
 /* Services starts ---------------->*/
@@ -574,9 +584,7 @@ footer {
   font-weight: 900;
   font-size: 2.2rem;
 }
-.serviceContentBox .paras {
-  text-align: justify;
-}
+
 @media screen and (max-width: 992px) {
   .serviceContentBox {
     padding: 5rem 10vw 4rem;
@@ -702,16 +710,15 @@ footer {
 /* Industries page ends --------------> */
 /* Career page starts, Mostly handled with Bootstrap -------------------->*/
 .careerCardBox {
-  padding: 5rem 7rem;
+  padding: 8rem 7rem;
   background-color: var(--customLightBlue);
-  margin-top: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 25px;
 }
 @media (max-width: 1220px) {
   .careerCardBox {
-    padding: 4rem 1.5rem;
+    padding: 6rem 1.5rem;
   }
 }
 .careerCard {
