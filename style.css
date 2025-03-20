@@ -399,16 +399,43 @@ main {
   transition: all 0.3s ease;
 }
 /* achievements end */
-/* documents start, mostly handled with bootstrap*/
-.companyDocuments {
-  margin-top: 5rem;
+/* documents start*/
+.document-container {
   background-color: var(--customLightBlue);
-  padding: 5rem 10vw;
+  padding: 1rem 10vw 5rem;
 }
-.companyDocuments img {
-  border: 2px solid black;
-  border-radius: 10px;
+.document-item {
+  border-radius: 12px;
+  background-color: white;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+.document-item h5 {
+  color: var(--customBlue);
+  font-weight: 700;
+}
+.document-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.document-image-container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.document-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 /* documents end */
 /* footer start */
 footer {
