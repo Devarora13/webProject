@@ -248,7 +248,7 @@ main {
 }
 .objectiveImage {
   /*alternateCardBox background*/
-  background-image: url("https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("images/objective.avif");
 }
 .obj {
   width: 60%;
@@ -620,32 +620,32 @@ footer {
 /* service content ends */
 /* service cards style from home-objective  */
 .serviceImage1 {
-  background-image: url("https://img.freepik.com/free-photo/colleagues-working-together-call-center-office_23-2149256064.jpg?t=st=1742230867~exp=1742234467~hmac=9e7e947a589ea29bc06b75bc3cc6085f79808e0f862d23331b45124ab7454dcf&w=1380");
+  background-image: url("images/telephone-survey.jpg");
 }
 /* CATI & Telephone page ends ---------------->*/
 /* Healthcare page -------------------> */
 .serviceImage2 {
-  background-image: url("https://img.freepik.com/free-photo/medical-banner-with-doctor-wearing-goggles_23-2149611193.jpg?t=st=1742231281~exp=1742234881~hmac=36a5e4c8d559320325ca6633a9bd2fa3b52341e2d09e99f01793105f6f84f2c9&w=1380");
+  background-image: url("images/healthcare.jpg");
 }
 /* Quantative page -------------------> */
 .serviceImage3 {
-  background-image: url("https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408682.jpg?t=st=1741781454~exp=1741785054~hmac=e50018da90ba1d258e7c196387063841b80ef21037a0586099d53dee0b31cd2e&w=1380");
+  background-image: url("images/quantitative.jpg");
 }
 /* Qualitative page -------------------> */
 .serviceImage4 {
-  background-image: url("https://img.freepik.com/free-photo/close-up-young-colleagues-having-meeting_23-2149060259.jpg?t=st=1741688743~exp=1741692343~hmac=e9ee85b6a41c0c20fc0b5dea018e6fc83bf3fe38210b17bdc7a8f9591bb2acad&w=1380");
+  background-image: url("images/qualitative.jpg");
 }
 /* Business page -------------------> */
 .serviceImage5 {
-  background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("images/business.avif");
 }
 /* Programming page -------------------> */
 .serviceImage6 {
-  background-image: url("https://images.unsplash.com/photo-1617471346061-5d329ab9c574?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("images/programming.avif");
 }
 /* Data-Analysis page -------------------> */
 .serviceImage7 {
-  background-image: url("https://images.unsplash.com/photo-1542744173-05336fcc7ad4?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("images/data-analysis.avif");
 }
 
 /* Services ends ---------------->*/

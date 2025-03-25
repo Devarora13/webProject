@@ -66,11 +66,6 @@ careerButtons.forEach((careerButton) => {
   });
 });
 
-//Disbale submissiom for now
-document.getElementById('career-form').addEventListener('submit', (e)=> {
-  e.preventDefault();
-});
-
 //Industries page handle-------------------------------------------------------->
 document.addEventListener('DOMContentLoaded', function() {
   // Industry data
@@ -277,11 +272,6 @@ function populateCountries() {
 // Populate countries when the page loads
 document.addEventListener('DOMContentLoaded', populateCountries);
 
-//Disbale submissiom for now
-document.getElementById('get-in-touch').addEventListener('submit', (e)=> {
-  e.preventDefault();
-});
-
 // Optional: Form submission handling
 // document.getElementsByClassName('get-in-touch').addEventListener('submit', function(event) {
 //   event.preventDefault();
@@ -302,3 +292,12 @@ document.getElementById('get-in-touch').addEventListener('submit', (e)=> {
 //       return;
 //   }
 // });
+
+
+//Disbale submissiom for now
+document.getElementById('get-in-touch').addEventListener('submit', (e)=> {
+  e.preventDefault();
+});
+document.getElementById('career-form').addEventListener('submit', (e)=> {
+  e.preventDefault();
+});
