@@ -778,3 +778,9 @@ footer {
 }
 
 /* Career page ends -------------------------->*/
+/* Contact page(get-in-touch) starts-------------> */
+.contactForm {
+  background-color: var(--customLightBlue);
+  padding: 3rem 10vw;
+}
+/* Contact page(get-in-touch) ends-------------> */
