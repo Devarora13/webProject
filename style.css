@@ -247,6 +247,11 @@ main {
   background-position: center;
   background-attachment: fixed;
 }
+@supports (-webkit-touch-callout: none) {
+  .alternateCardBox {
+    background-attachment: scroll;
+  }
+}
 .objectiveImage {
   /*alternateCardBox background*/
   background-image: url("images/objective.avif");
@@ -483,6 +488,7 @@ footer {
   font-weight: 900;
   font-size: 2rem;
   color: white;
+  margin-bottom: 0;
 }
 .footerUpper,
 .footerMiddle {
