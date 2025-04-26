@@ -60,82 +60,94 @@ const jobField = document.getElementById("jobRole");
 
 careerButtons.forEach((careerButton) => {
   careerButton.addEventListener("click", () => {
-    let jobRole = careerButton.getAttribute("jobRole");
-    jobTitle.innerHTML = `Applying for ${jobRole}`;
-    jobField.value = jobRole;
+    let selectedJobRole = careerButton.getAttribute("jobRole");
+    jobTitle.innerHTML = `Applying for ${selectedJobRole}`;
+    jobField.value = selectedJobRole;
   });
 });
 
 //Industries page handle-------------------------------------------------------->
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Industry data
   const industries = [
-      {
-          title: "Healthcare & Pharmaceuticals",
-          icon: "fa-solid fa-hospital",
-          content: "From market access strategies to real-world evidence studies, we provide in-depth insights for pharmaceutical companies, medical device manufacturers, and healthcare providers. Our research supports drug development, patient experience studies, and healthcare professional engagement."
-      },
-      {
-          title: "Technology & Telecommunications",
-          icon: "fa-solid fa-microchip",
-          content: "In a fast-evolving tech landscape, staying ahead requires precise market intelligence. We help technology firms, telecom providers, and SaaS companies understand user behavior, product performance, and emerging industry trends."
-      },
-      {
-          title: "Consumer Goods & Retail",
-          icon: "fa-solid fa-shopping-cart",
-          content: "From product testing to customer satisfaction analysis, we assist FMCG brands and retailers in understanding consumer preferences, optimizing pricing strategies, and enhancing brand loyalty in a competitive market."
-      },
-      {
-          title: "Financial Services & Insurance",
-          icon: "fa-solid fa-landmark",
-          content: "We provide data-driven insights to banks, fintech firms, and insurance companies, helping them assess risk, improve customer experience, and refine financial products for evolving market needs."
-      },
-      {
-          title: "Automotive & Mobility",
-          icon: "fa-solid fa-car",
-          content: "Our research in the automotive sector covers vehicle preferences, brand perception, electric vehicle adoption, and mobility trends, enabling manufacturers and service providers to align with shifting consumer demands."
-      },
-      {
-          title: "B2B & Industrial Markets",
-          icon: "fa-solid fa-industry",
-          content: "We support manufacturers, supply chain operators, and industrial service providers with research on market expansion, business decision-making, and competitive benchmarking in complex B2B environments."
-      },
-      {
-          title: "Media, Advertising & Entertainment",
-          icon: "fa-solid fa-film",
-          content: "From audience analysis to ad effectiveness measurement, we help media agencies, broadcasters, and entertainment companies optimize their content and marketing strategies for maximum impact."
-      },
-      {
-          title: "Travel, Tourism & Hospitality",
-          icon: "fa-solid fa-plane",
-          content: "We analyze traveler behavior, guest satisfaction, and market trends to help hotels, airlines, and tourism boards enhance customer experiences and tailor offerings to evolving demands."
-      },
-      {
-          title: "Energy & Utilities",
-          icon: "fa-solid fa-bolt",
-          content: "We assist energy companies in understanding regulatory trends, customer expectations, and sustainability initiatives to drive innovation in renewable energy, oil & gas, and utility services."
-      },
-      {
-          title: "Government & Public Sector",
-          icon: "fa-solid fa-landmark-dome",
-          content: "Our research supports policy-making, citizen engagement, and social program effectiveness, helping government agencies and NGOs make informed decisions based on real-world data."
-      }
+    {
+      title: "Healthcare & Pharmaceuticals",
+      icon: "fa-solid fa-hospital",
+      content:
+        "From market access strategies to real-world evidence studies, we provide in-depth insights for pharmaceutical companies, medical device manufacturers, and healthcare providers. Our research supports drug development, patient experience studies, and healthcare professional engagement.",
+    },
+    {
+      title: "Technology & Telecommunications",
+      icon: "fa-solid fa-microchip",
+      content:
+        "In a fast-evolving tech landscape, staying ahead requires precise market intelligence. We help technology firms, telecom providers, and SaaS companies understand user behavior, product performance, and emerging industry trends.",
+    },
+    {
+      title: "Consumer Goods & Retail",
+      icon: "fa-solid fa-shopping-cart",
+      content:
+        "From product testing to customer satisfaction analysis, we assist FMCG brands and retailers in understanding consumer preferences, optimizing pricing strategies, and enhancing brand loyalty in a competitive market.",
+    },
+    {
+      title: "Financial Services & Insurance",
+      icon: "fa-solid fa-landmark",
+      content:
+        "We provide data-driven insights to banks, fintech firms, and insurance companies, helping them assess risk, improve customer experience, and refine financial products for evolving market needs.",
+    },
+    {
+      title: "Automotive & Mobility",
+      icon: "fa-solid fa-car",
+      content:
+        "Our research in the automotive sector covers vehicle preferences, brand perception, electric vehicle adoption, and mobility trends, enabling manufacturers and service providers to align with shifting consumer demands.",
+    },
+    {
+      title: "B2B & Industrial Markets",
+      icon: "fa-solid fa-industry",
+      content:
+        "We support manufacturers, supply chain operators, and industrial service providers with research on market expansion, business decision-making, and competitive benchmarking in complex B2B environments.",
+    },
+    {
+      title: "Media, Advertising & Entertainment",
+      icon: "fa-solid fa-film",
+      content:
+        "From audience analysis to ad effectiveness measurement, we help media agencies, broadcasters, and entertainment companies optimize their content and marketing strategies for maximum impact.",
+    },
+    {
+      title: "Travel, Tourism & Hospitality",
+      icon: "fa-solid fa-plane",
+      content:
+        "We analyze traveler behavior, guest satisfaction, and market trends to help hotels, airlines, and tourism boards enhance customer experiences and tailor offerings to evolving demands.",
+    },
+    {
+      title: "Energy & Utilities",
+      icon: "fa-solid fa-bolt",
+      content:
+        "We assist energy companies in understanding regulatory trends, customer expectations, and sustainability initiatives to drive innovation in renewable energy, oil & gas, and utility services.",
+    },
+    {
+      title: "Government & Public Sector",
+      icon: "fa-solid fa-landmark-dome",
+      content:
+        "Our research supports policy-making, citizen engagement, and social program effectiveness, helping government agencies and NGOs make informed decisions based on real-world data.",
+    },
   ];
-  
+
   let currentSlide = 0;
   const totalSlides = industries.length;
-  
+
   // Initialize slider
   function initSlider() {
-      const sliderContainer = document.getElementById('industrySlider');
-      const indicatorsContainer = document.getElementById('indicators');
-      
-      // Create slides
-      industries.forEach((industry, index) => {
-          const slide = document.createElement('div');
-          slide.className = `slider-card card rounded-4 shadow ${index === 0 ? 'active' : ''} min-vh-50`;
-          
-          slide.innerHTML = `
+    const sliderContainer = document.getElementById("industrySlider");
+    const indicatorsContainer = document.getElementById("indicators");
+
+    // Create slides
+    industries.forEach((industry, index) => {
+      const slide = document.createElement("div");
+      slide.className = `slider-card card rounded-4 shadow ${
+        index === 0 ? "active" : ""
+      } min-vh-50`;
+
+      slide.innerHTML = `
               <div class="card-body p-4 p-md-5 text-center">
                   <div class="slider-icon mb-4 mx-auto">
                       <i class="${industry.icon}"></i>
@@ -144,160 +156,378 @@ document.addEventListener('DOMContentLoaded', function() {
                   <p>${industry.content}</p>
               </div>
           `;
-          
-          sliderContainer.appendChild(slide);
-          
-          // Create indicator
-          const indicator = document.createElement('div');
-          indicator.className = `indicator ${index === 0 ? 'active' : ''}`;
-          indicator.setAttribute('data-index', index);
-          indicator.addEventListener('click', () => goToSlide(index));
-          
-          indicatorsContainer.appendChild(indicator);
-      });
-      
-      checkButtonsState();
+
+      sliderContainer.appendChild(slide);
+
+      // Create indicator
+      const indicator = document.createElement("div");
+      indicator.className = `indicator ${index === 0 ? "active" : ""}`;
+      indicator.setAttribute("data-index", index);
+      indicator.addEventListener("click", () => goToSlide(index));
+
+      indicatorsContainer.appendChild(indicator);
+    });
+
+    checkButtonsState();
   }
-  
+
   // Go to specific slide
   function goToSlide(index) {
-      if (index < 0 || index >= totalSlides) return;
-      
-      const slides = document.querySelectorAll('.slider-card');
-      const indicators = document.querySelectorAll('.indicator');
-      
-      slides.forEach(slide => slide.classList.remove('active'));
-      indicators.forEach(indicator => indicator.classList.remove('active'));
-      
-      slides[index].classList.add('active');
-      indicators[index].classList.add('active');
-      
-      currentSlide = index;
-      checkButtonsState();
+    if (index < 0 || index >= totalSlides) return;
+
+    const slides = document.querySelectorAll(".slider-card");
+    const indicators = document.querySelectorAll(".indicator");
+
+    slides.forEach((slide) => slide.classList.remove("active"));
+    indicators.forEach((indicator) => indicator.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    indicators[index].classList.add("active");
+
+    currentSlide = index;
+    checkButtonsState();
   }
-  
+
   // Check buttons state
   function checkButtonsState() {
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      
-      prevBtn.classList.toggle('disabled', currentSlide === 0);
-      nextBtn.classList.toggle('disabled', currentSlide === totalSlides - 1);
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    prevBtn.classList.toggle("disabled", currentSlide === 0);
+    nextBtn.classList.toggle("disabled", currentSlide === totalSlides - 1);
   }
-  
+
   // Initialize
   initSlider();
-  
+
   // Navigation buttons
-  document.getElementById('nextBtn').addEventListener('click', function() {
-      if (currentSlide < totalSlides - 1) {
-          goToSlide(currentSlide + 1);
-      }
+  document.getElementById("nextBtn").addEventListener("click", function () {
+    if (currentSlide < totalSlides - 1) {
+      goToSlide(currentSlide + 1);
+    }
   });
-  
-  document.getElementById('prevBtn').addEventListener('click', function() {
-      if (currentSlide > 0) {
-          goToSlide(currentSlide - 1);
-      }
+
+  document.getElementById("prevBtn").addEventListener("click", function () {
+    if (currentSlide > 0) {
+      goToSlide(currentSlide - 1);
+    }
   });
-  
+
   // Keyboard navigation
-  document.addEventListener('keydown', function(event) {
-      if (event.key === 'ArrowRight') {
-          if (currentSlide < totalSlides - 1) {
-              goToSlide(currentSlide + 1);
-          }
-      } else if (event.key === 'ArrowLeft') {
-          if (currentSlide > 0) {
-              goToSlide(currentSlide - 1);
-          }
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowRight") {
+      if (currentSlide < totalSlides - 1) {
+        goToSlide(currentSlide + 1);
       }
+    } else if (event.key === "ArrowLeft") {
+      if (currentSlide > 0) {
+        goToSlide(currentSlide - 1);
+      }
+    }
   });
 });
 
 //Contact form (Get-In-Touch) form countries handle-------------------------------------->
 
-
 // Simple array of country names
 const countries = [
-  "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda",
-  "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas",
-  "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin",
-  "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei",
-  "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon",
-  "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia",
-  "Comoros", "Congo (Congo-Brazzaville)", "Costa Rica", "Croatia", "Cuba",
-  "Cyprus", "Czechia (Czech Republic)", "Democratic Republic of the Congo",
-  "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt",
-  "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini (Swaziland)",
-  "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany",
-  "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana",
-  "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq",
-  "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya",
-  "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho",
-  "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar",
-  "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands",
-  "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco",
-  "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar (Burma)", "Namibia",
-  "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria",
-  "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau",
-  "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines",
-  "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda",
-  "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines",
-  "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal",
-  "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia",
-  "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan",
-  "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria",
-  "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga",
-  "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda",
-  "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay",
-  "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen",
-  "Zambia", "Zimbabwe"
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Antigua and Barbuda",
+  "Argentina",
+  "Armenia",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cabo Verde",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombia",
+  "Comoros",
+  "Congo (Congo-Brazzaville)",
+  "Costa Rica",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czechia (Czech Republic)",
+  "Democratic Republic of the Congo",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Eswatini (Swaziland)",
+  "Ethiopia",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Grenada",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montenegro",
+  "Morocco",
+  "Mozambique",
+  "Myanmar (Burma)",
+  "Namibia",
+  "Nauru",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "North Korea",
+  "North Macedonia",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Palestine",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent and the Grenadines",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "South Korea",
+  "South Sudan",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Timor-Leste",
+  "Togo",
+  "Tonga",
+  "Trinidad and Tobago",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Tuvalu",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
+  "United Kingdom",
+  "United States",
+  "Uruguay",
+  "Uzbekistan",
+  "Vanuatu",
+  "Vatican City",
+  "Venezuela",
+  "Vietnam",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
 ];
-
 
 // Function to populate country dropdown
 function populateCountries() {
-  const countrySelect = document.getElementById('form-country');
-  
+  const countrySelect = document.getElementById("form-country");
+
   // Add countries to the dropdown
-  countries.forEach(country => {
-      const option = document.createElement('option');
-      option.value = country;
-      option.textContent = country;
-      countrySelect.appendChild(option);
+  countries.forEach((country) => {
+    const option = document.createElement("option");
+    option.value = country;
+    option.textContent = country;
+    countrySelect.appendChild(option);
   });
 }
 
 // Populate countries when the page loads
-document.addEventListener('DOMContentLoaded', populateCountries);
+document.addEventListener("DOMContentLoaded", populateCountries);
 
-// Optional: Form submission handling
-// document.getElementsByClassName('get-in-touch').addEventListener('submit', function(event) {
-//   event.preventDefault();
-  // Collect form data
-  // const formData = {
-  //     helpType: document.getElementById('helpSelect').value,
-  //     firstName: document.getElementById('firstName').value,
-  //     lastName: document.getElementById('lastName').value,
-  //     email: document.getElementById('email').value,
-  //     phone: document.getElementById('phone').value,
-  //     companyName: document.getElementById('companyName').value,
-  //     country: document.getElementById('form-country').value
-  // };
+//Form submission handling----------------------------------------------------->
+const contactForm = document.getElementById("get-in-touch");
+const careerForm = document.getElementById("career-form");
 
-  // Simple validation
-//   if (formData.helpType === 'Select how we can help you') {
-//       alert('Please select how we can help you');
-//       return;
-//   }
-// });
+// Handle Contact Form
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      helpType: contactForm.helpType.value,
+      firstName: contactForm.firstName.value,
+      lastName: contactForm.lastName.value,
+      email: contactForm.email.value,
+      phone: contactForm.phone.value,
+      companyName: contactForm.companyName.value,
+      country: contactForm["form-country"].value,
+    };
+
+    try {
+      const response = await fetch("/api/sendContactForm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Contact form submitted successfully!");
+        contactForm.reset();
+      } else {
+        alert("Failed to submit contact form.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Error submitting contact form.");
+    }
+  });
+}
+
+// Handle Career Form -------------------------------------------------->
+if (careerForm) {
+  careerForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const resumeFile = careerForm.resume.files[0];
+
+    if (!resumeFile) {
+      alert("Please upload your resume.");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onloadend = async () => {
+      const resumeFileContent = reader.result.split(",")[1]; // base64 content
+
+      const formData = {
+        firstName: careerForm.firstName.value,
+        lastName: careerForm.lastName.value,
+        email: careerForm.email.value,
+        phone: careerForm.phone.value,
+        jobRole: careerForm.jobRole.value,
+        resumeFileName: resumeFile.name,
+        resumeFileContent: resumeFileContent,
+      };
+
+      try {
+        const response = await fetch("/api/sendCareerForm", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          alert("Career form submitted successfully!");
+          careerForm.reset();
+        } else {
+          alert("Failed to submit career form.");
+        }
+      } catch (error) {
+        console.error(error);
+        alert("Error submitting career form.");
+      }
+    };
+    reader.readAsDataURL(resumeFile);
+  });
+}
 
 
-//Disbale submissiom for now
-document.getElementById('get-in-touch').addEventListener('submit', (e)=> {
-  e.preventDefault();
-});
-document.getElementById('career-form').addEventListener('submit', (e)=> {
-  e.preventDefault();
-});
